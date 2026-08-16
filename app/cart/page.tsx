@@ -24,10 +24,10 @@ export default function CartPage() {
       message += `• ${item.name} ×${quantity} - ₦${(item.price * quantity).toLocaleString()}\n`;
     });
 
-    message += `\nTotal: ₦${totalPrice.toLocaleString()}\n\nDelivery Address:\n[Please type your full address here]\nName:\nPhone Number:\n\nThank you!`;
+    message += message += `\nTotal: ₦${totalPrice.toLocaleString()}\n\nCustomer Details:\nName: [Enter your name]\nPhone Number: [Enter your phone number]\nDelivery Address: [Enter your full address]\n\nThank you!`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/234YOURNUMBER?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/2348088740343?text=${encodedMessage}`, '_blank');
   };
 
   if (cart.length === 0) {

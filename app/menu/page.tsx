@@ -2,10 +2,11 @@
 
 import { useState, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, ShoppingCart } from 'lucide-react';
 import { useCart, MenuItem } from '@/context/CartContext';
 
 const menuItems: (MenuItem & { image: string })[] = [
@@ -18,7 +19,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken wing", 
     price: 4500, 
     category: "Small Chops",
-    image: "/menu/mini-bites.png"
+    image: "/menu/mini.jpg"
   },
   { 
     id: 2, 
@@ -26,7 +27,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Kebab", 
     price: 5000, 
     category: "Small Chops",
-    image: "/menu/otuns-poster.png"
+    image: "/menu/chop.jpg"
   },
   { 
     id: 3, 
@@ -34,7 +35,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken drum stick", 
     price: 5500, 
     category: "Small Chops",
-    image: "/menu/taste-teaser.png"
+    image: "/menu/taste.jpg"
   },
   { 
     id: 4, 
@@ -42,7 +43,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken wing, 1 Stick sausage", 
     price: 6500, 
     category: "Small Chops",
-    image: "/menu/snacker-delight.png"
+    image: "/menu/snacker.jpg"
   },
   { 
     id: 5, 
@@ -50,7 +51,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Stick sausage, 1 Puff prawns", 
     price: 7500, 
     category: "Small Chops",
-    image: "/menu/quick-nibble.png"
+    image: "/menu/quick.jpg"
   },
   { 
     id: 6, 
@@ -58,7 +59,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Puff prawns, 1 Peppered gizzard", 
     price: 8500, 
     category: "Small Chops",
-    image: "/menu/golden-morsel.png"
+    image: "/menu/golden.jpg"
   },
   { 
     id: 7, 
@@ -66,7 +67,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Peppered snail, 1 Puff prawns, 1 Peppered gizzard", 
     price: 9500, 
     category: "Small Chops",
-    image: "/menu/elegant-finger.png"
+    image: "/menu/elegant.jpg"
   },
   { 
     id: 8, 
@@ -74,7 +75,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "2 Samosa, 2 Spring roll, 8 Mosa, 12 Puff puff, 2 Chicken, 2 Peppered snail, 2 Puff prawns, 2 Peppered gizzard", 
     price: 18500, 
     category: "Small Chops",
-    image: "/menu/royal-feast.png"
+    image: "/menu/royal.jpg"
   },
   { 
     id: 9, 
@@ -82,7 +83,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "4 Samosa, 4 Spring roll, 16 Mosa, 24 Puff puff, 4 Chicken, 4 Peppered snail, 4 Puff prawns, 4 Peppered gizzard", 
     price: 32000, 
     category: "Small Chops",
-    image: "/menu/family-feast.png"
+    image: "/menu/family.jpg"
   },
 
   // ======================
@@ -94,7 +95,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "4 Fried Yam, 4 Sweet Potatoes, 4 Slices of Fried Plantain, 1 Peppered Chicken, Peppered Sauce", 
     price: 7000, 
     category: "Golden Linking Fries",
-    image: "/menu/gourmet-bite.png"
+    image: "/menu/gourmet.jpg"
   },
   { 
     id: 11, 
@@ -208,11 +209,10 @@ const menuItems: (MenuItem & { image: string })[] = [
 
 const categories = ["All", "Small Chops", "Golden Linking Fries", "Themed Packages"];
 
-// Tiny blur placeholder
 const blurDataURL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
 export default function MenuPage() {
-  const { cart, addToCart, decreaseQuantity, increaseQuantity } = useCart();
+  const { cart, addToCart, decreaseQuantity, increaseQuantity, totalItems } = useCart();
   const [activeCategory, setActiveCategory] = useState("All");
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -235,14 +235,14 @@ export default function MenuPage() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="max-w-7xl mx-auto px-6 py-12 pb-32">
       <h1 className="text-4xl font-bold text-center mb-4">Our Menu</h1>
       <p className="text-center text-gray-600 mb-8">
         Choose from our delicious packs
       </p>
 
       {/* Sticky Category Navigation */}
-      <div className="sticky top-20 z-40 bg-white/90 backdrop-blur-md py-4 mb-10 border-b">
+      <div className="z-40 bg-white/90 backdrop-blur-md py-4 mb-10 border-b">
         <div className="flex flex-wrap justify-center gap-3">
           {categories.map((category) => (
             <button
@@ -268,7 +268,6 @@ export default function MenuPage() {
 
           return (
             <Card key={item.id} className="food-card overflow-hidden group">
-              {/* Optimized Image */}
               <div className="relative h-60 overflow-hidden bg-orange-50">
                 <Image
                   src={item.image}
@@ -279,7 +278,7 @@ export default function MenuPage() {
                   quality={80}
                   placeholder="blur"
                   blurDataURL={blurDataURL}
-                  priority={index < 3} // First 3 images load immediately
+                  priority={index < 3}
                 />
               </div>
 
@@ -334,6 +333,22 @@ export default function MenuPage() {
         <div className="text-center py-20 text-gray-500">
           No items found in this category.
         </div>
+      )}
+
+      {/* ================= FLOATING CART BUTTON ================= */}
+      {totalItems > 0 && (
+        <Link
+          href="/cart"
+          className="fixed bottom-24 right-6 z-50 flex items-center gap-3 bg-orange-600 hover:bg-orange-700 text-white px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95"
+        >
+          <div className="relative">
+            <ShoppingCart size={22} />
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+              {totalItems}
+            </span> 
+          </div>
+          <span className="font-medium hidden sm:inline">View Cart</span>
+        </Link>
       )}
     </div>
   );
