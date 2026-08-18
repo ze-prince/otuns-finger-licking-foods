@@ -275,7 +275,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-linear-to-r from-orange-600 to-amber-500 rounded-4xl p-10 md:p-16 text-center text-white shadow-xl"
+          className="bg-linear-to-r from-orange-950 via-orange-800 to-zinc-950 rounded-4xl p-10 md:p-16 text-center text-white shadow-xl"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Hungry already?
