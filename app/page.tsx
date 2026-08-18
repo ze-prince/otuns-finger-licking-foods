@@ -68,10 +68,10 @@ const bestSellers = [
 const galleryPreview = [
   '/menu/mini.jpg',
   '/menu/taste.jpg',
-  '/menu/gourmet.jfif',
+  '/menu/gourmet.jpg',
   '/menu/royal.jpg',
-  '/menu/platter.jfif',
-  '/menu/big.jfif',
+  '/menu/platter.jpg',
+  '/menu/big.jpg',
 ];
 
 const testimonials = [

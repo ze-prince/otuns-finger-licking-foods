@@ -95,7 +95,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "4 Fried Yam, 4 Sweet Potatoes, 4 Slices of Fried Plantain, 1 Peppered Chicken, Peppered Sauce", 
     price: 7000, 
     category: "Golden Linking Fries",
-    image: "/menu/gourmet.jfif"
+    image: "/menu/gourmet.jpg"
   },
   { 
     id: 11, 
@@ -103,7 +103,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Fried Plantain, Peppered Sauce", 
     price: 5500, 
     category: "Golden Linking Fries",
-    image: "/menu/grazing.jfif"
+    image: "/menu/grazing.jpg"
   },
   { 
     id: 12, 
@@ -111,7 +111,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, Peppered Sauce, 1 Ponmo, 1 Boiled Egg", 
     price: 7500, 
     category: "Golden Linking Fries",
-    image: "/menu/exquisite.jfif"
+    image: "/menu/exquisite.jpg"
   },
   { 
     id: 13, 
@@ -119,7 +119,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, 1 Sausage, Peppered Sauce", 
     price: 7000, 
     category: "Golden Linking Fries",
-    image: "/menu/petite.jfif"
+    image: "/menu/petite.jpg"
   },
   { 
     id: 14, 
@@ -127,7 +127,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, Peppered Sauce, 1 Boiled Egg, 1 Peppered Chicken, 1 Sausage", 
     price: 9000, 
     category: "Golden Linking Fries",
-    image: "/menu/bite.jfif"
+    image: "/menu/bite.jpg"
   },
   { 
     id: 15, 
@@ -135,7 +135,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Fried Plantain, 2 Peppered Chicken, Peppered Sauce", 
     price: 14000, 
     category: "Golden Linking Fries",
-    image: "/menu/together.jfif"
+    image: "/menu/together.jpg"
   },
   { 
     id: 16, 
@@ -143,7 +143,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Fried Plantain, Peppered Sauce", 
     price: 11000, 
     category: "Golden Linking Fries",
-    image: "/menu/platter.jfif"
+    image: "/menu/platter.jpg"
   },
   { 
     id: 17, 
@@ -151,7 +151,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, Peppered Sauce, 2 Kebab, 2 Ponmo, 2 Boiled Eggs", 
     price: 16000, 
     category: "Golden Linking Fries",
-    image: "/menu/luxury.jfif"
+    image: "/menu/luxury.jpg"
   },
   { 
     id: 18, 
@@ -159,7 +159,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, 2 Sausage, 2 Kebab, Peppered Sauce", 
     price: 14500, 
     category: "Golden Linking Fries",
-    image: "/menu/essentials.jfif"
+    image: "/menu/essentials.jpg"
   },
   { 
     id: 19, 
@@ -167,7 +167,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, Peppered Sauce, 2 Boiled Egg, 2 Peppered Chicken, 2 Sausage", 
     price: 16500, 
     category: "Golden Linking Fries",
-    image: "/menu/occassion.jfif"
+    image: "/menu/occassion.jpg"
   },
   { 
     id: 20, 
@@ -175,7 +175,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, Peppered Sauce, 2 Boiled Egg, 2 Peppered Chicken, 2 Sausage, 2 Ponmo", 
     price: 18000, 
     category: "Golden Linking Fries",
-    image: "/menu/gather.jfif"
+    image: "/menu/gather.jpg"
   },
 
   // ======================
@@ -187,7 +187,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Peppered snail, 1 Puff prawn, 1 Peppered gizzard, 1 Stick sausage, 5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, 1 Ponmo, 1 Boiled Egg, 1 Peppered Chicken, 1 Sausage, 1 Stick of Kebab, Peppered Sauce", 
     price: 22000, 
     category: "Themed Packages",
-    image: "/menu/big.jfif"
+    image: "/menu/big.jpg"
   },
   { 
     id: 22, 
@@ -195,7 +195,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "2 Samosa, 2 Spring roll, 8 Mosa, 12 Puff puff, 2 Chicken, 2 Peppered snail, 2 Puff prawn, 2 Peppered gizzard, 2 Stick sausage, 10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, 2 Ponmo, 2 Boiled Egg, 2 Peppered Chicken, 2 Sausage, 2 Sticks of Kebab, Peppered Sauce", 
     price: 38000, 
     category: "Themed Packages",
-    image: "/menu/group.jfif"
+    image: "/menu/group.jpg"
   },
   { 
     id: 23, 
@@ -203,7 +203,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     description: "4 Samosa, 4 Spring roll, 16 Mosa, 24 Puff puff, 4 Chicken, 4 Peppered snail, 4 Puff prawn, 4 Peppered gizzard, 4 Stick sausage, 20 Fried Yam, 24 Sweet Potatoes, 16 Slices of Plantain, 4 Ponmo, 4 Boiled Egg, 4 Peppered Chicken, 4 Sausage, 4 Sticks of Kebab, Peppered Sauce", 
     price: 65000, 
     category: "Themed Packages",
-    image: "/menu/share.jfif"
+    image: "/menu/share.jpg"
   },
 ];
 
