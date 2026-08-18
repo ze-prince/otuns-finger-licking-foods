@@ -24,7 +24,7 @@ export default function CartPage() {
       message += `• ${item.name} ×${quantity} - ₦${(item.price * quantity).toLocaleString()}\n`;
     });
 
-    message += message += `\nTotal: ₦${totalPrice.toLocaleString()}\n\nCustomer Details:\nName: [Enter your name]\nPhone Number: [Enter your phone number]\nDelivery Address: [Enter your full address]\n\nThank you!`;
+    message += `\nTotal: ₦${totalPrice.toLocaleString()}\n\nCustomer Details:\nName: [Enter your name]\nPhone Number: [Enter your phone number]\nDelivery Address: [Enter your full address]\n\nThank you!`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/2348088740343?text=${encodedMessage}`, '_blank');
