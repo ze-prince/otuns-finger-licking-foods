@@ -17,7 +17,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 1, 
     name: "MINI BITES PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken wing", 
-    price: 4500, 
+    price: 2380, 
     category: "Small Chops",
     image: "/menu/mini.jpg"
   },
@@ -25,7 +25,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 2, 
     name: "CHOP LITE PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Kebab", 
-    price: 5000, 
+    price: 2380, 
     category: "Small Chops",
     image: "/menu/chop.jpg"
   },
@@ -33,7 +33,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 3, 
     name: "TASTE TEASERS PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken drum stick", 
-    price: 5500, 
+    price: 2560, 
     category: "Small Chops",
     image: "/menu/taste.jpg"
   },
@@ -41,7 +41,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 4, 
     name: "SNACKER'S DELIGHT PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken wing, 1 Stick sausage", 
-    price: 6500, 
+    price: 3560, 
     category: "Small Chops",
     image: "/menu/snacker.jpg"
   },
@@ -49,7 +49,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 5, 
     name: "QUICK NIBBLE PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Stick sausage, 1 Puff prawns", 
-    price: 7500, 
+    price: 4890, 
     category: "Small Chops",
     image: "/menu/quick.jpg"
   },
@@ -57,7 +57,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 6, 
     name: "GOLDEN MORSELS PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Puff prawns, 1 Peppered gizzard", 
-    price: 8500, 
+    price: 4890, 
     category: "Small Chops",
     image: "/menu/golden.jpg"
   },
@@ -65,7 +65,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 7, 
     name: "ELEGANT FINGER TREATS PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Peppered snail, 1 Puff prawns, 1 Peppered gizzard", 
-    price: 9500, 
+    price: 7390, 
     category: "Small Chops",
     image: "/menu/elegant.jpg"
   },
@@ -73,7 +73,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 8, 
     name: "ROYAL FEAST PACK", 
     description: "2 Samosa, 2 Spring roll, 8 Mosa, 12 Puff puff, 2 Chicken, 2 Peppered snail, 2 Puff prawns, 2 Peppered gizzard", 
-    price: 18500, 
+    price: 14200, 
     category: "Small Chops",
     image: "/menu/royal.jpg"
   },
@@ -81,7 +81,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 9, 
     name: "FAMILY FEAST PACK", 
     description: "4 Samosa, 4 Spring roll, 16 Mosa, 24 Puff puff, 4 Chicken, 4 Peppered snail, 4 Puff prawns, 4 Peppered gizzard", 
-    price: 32000, 
+    price: 26980, 
     category: "Small Chops",
     image: "/menu/family.jpg"
   },
@@ -93,7 +93,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 10, 
     name: "THE GOURMET BITES PACK", 
     description: "4 Fried Yam, 4 Sweet Potatoes, 4 Slices of Fried Plantain, 1 Peppered Chicken, Peppered Sauce", 
-    price: 7000, 
+    price: 2540, 
     category: "Golden Linking Fries",
     image: "/menu/gourmet.jpg"
   },
@@ -101,7 +101,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 11, 
     name: "GRAZING PACK", 
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Fried Plantain, Peppered Sauce", 
-    price: 5500, 
+    price: 1840, 
     category: "Golden Linking Fries",
     image: "/menu/grazing.jpg"
   },
@@ -109,7 +109,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 12, 
     name: "EXQUISITE NIBBLES PACK", 
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, Peppered Sauce, 1 Ponmo, 1 Boiled Egg", 
-    price: 7500, 
+    price: 2650, 
     category: "Golden Linking Fries",
     image: "/menu/exquisite.jpg"
   },
@@ -117,7 +117,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 13, 
     name: "PETITE DELIGHTS PACK", 
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, 1 Sausage, Peppered Sauce", 
-    price: 7000, 
+    price: 2340, 
     category: "Golden Linking Fries",
     image: "/menu/petite.jpg"
   },
@@ -125,7 +125,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 14, 
     name: "BITE-SIZE D BLISS PACK", 
     description: "5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, Peppered Sauce, 1 Boiled Egg, 1 Peppered Chicken, 1 Sausage", 
-    price: 9000, 
+    price: 3650, 
     category: "Golden Linking Fries",
     image: "/menu/bite.jpg"
   },
@@ -133,7 +133,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 15, 
     name: "TOGETHERNESS PACK", 
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Fried Plantain, 2 Peppered Chicken, Peppered Sauce", 
-    price: 14000, 
+    price: 5870, 
     category: "Golden Linking Fries",
     image: "/menu/together.jpg"
   },
@@ -141,7 +141,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 16, 
     name: "THE PLATTER PACK", 
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Fried Plantain, Peppered Sauce", 
-    price: 11000, 
+    price: 2780, 
     category: "Golden Linking Fries",
     image: "/menu/platter.jpg"
   },
@@ -149,7 +149,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 17, 
     name: "LUXURY CHOP PACK", 
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, Peppered Sauce, 2 Kebab, 2 Ponmo, 2 Boiled Eggs", 
-    price: 16000, 
+    price: 4580, 
     category: "Golden Linking Fries",
     image: "/menu/luxury.jpg"
   },
@@ -157,7 +157,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 18, 
     name: "ESSENTIALS PACK", 
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, 2 Sausage, 2 Kebab, Peppered Sauce", 
-    price: 14500, 
+    price: 3790, 
     category: "Golden Linking Fries",
     image: "/menu/essentials.jpg"
   },
@@ -165,7 +165,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 19, 
     name: "OCCASION'S DELIGHT PACK", 
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, Peppered Sauce, 2 Boiled Egg, 2 Peppered Chicken, 2 Sausage", 
-    price: 16500, 
+    price: 7890, 
     category: "Golden Linking Fries",
     image: "/menu/occassion.jpg"
   },
@@ -173,7 +173,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 20, 
     name: "GATHER & MUNCH PACK", 
     description: "10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, Peppered Sauce, 2 Boiled Egg, 2 Peppered Chicken, 2 Sausage, 2 Ponmo", 
-    price: 18000, 
+    price: 8390, 
     category: "Golden Linking Fries",
     image: "/menu/gather.jpg"
   },
@@ -185,7 +185,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 21, 
     name: "BIG BITES BUNDLE PACK", 
     description: "1 Samosa, 1 Spring roll, 4 Mosa, 6 Puff puff, 1 Chicken, 1 Peppered snail, 1 Puff prawn, 1 Peppered gizzard, 1 Stick sausage, 5 Fried Yam, 6 Sweet Potatoes, 4 Slices of Plantain, 1 Ponmo, 1 Boiled Egg, 1 Peppered Chicken, 1 Sausage, 1 Stick of Kebab, Peppered Sauce", 
-    price: 22000, 
+    price: 14590, 
     category: "Themed Packages",
     image: "/menu/big.jpg"
   },
@@ -193,7 +193,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 22, 
     name: "GROUP NIBBLE PACK", 
     description: "2 Samosa, 2 Spring roll, 8 Mosa, 12 Puff puff, 2 Chicken, 2 Peppered snail, 2 Puff prawn, 2 Peppered gizzard, 2 Stick sausage, 10 Fried Yam, 12 Sweet Potatoes, 8 Slices of Plantain, 2 Ponmo, 2 Boiled Egg, 2 Peppered Chicken, 2 Sausage, 2 Sticks of Kebab, Peppered Sauce", 
-    price: 38000, 
+    price: 27590, 
     category: "Themed Packages",
     image: "/menu/group.jpg"
   },
@@ -201,7 +201,7 @@ const menuItems: (MenuItem & { image: string })[] = [
     id: 23, 
     name: "SHARE & SAVOR PACK", 
     description: "4 Samosa, 4 Spring roll, 16 Mosa, 24 Puff puff, 4 Chicken, 4 Peppered snail, 4 Puff prawn, 4 Peppered gizzard, 4 Stick sausage, 20 Fried Yam, 24 Sweet Potatoes, 16 Slices of Plantain, 4 Ponmo, 4 Boiled Egg, 4 Peppered Chicken, 4 Sausage, 4 Sticks of Kebab, Peppered Sauce", 
-    price: 65000, 
+    price: 52980, 
     category: "Themed Packages",
     image: "/menu/share.jpg"
   },

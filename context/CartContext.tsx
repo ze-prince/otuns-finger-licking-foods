@@ -8,6 +8,7 @@ export interface MenuItem {
   description: string;
   price: number;
   category: string;
+  image?: string;
 }
 
 interface CartItem {

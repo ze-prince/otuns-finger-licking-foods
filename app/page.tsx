@@ -19,21 +19,21 @@ const blurDataURL =
 // once you have one; a mismatched hero photo undercuts trust fast.
 const featuredDishes = [
   {
-    title: 'Signature Asun',
+    title: 'Royal Feast Pack',
     desc: 'The spicy flavour everyone keeps coming back for.',
-    price: 'From ₦4,500',
+    price: 'From ₦14,200',
     image: '/menu/royal.jpg',
   },
   {
     title: 'Small Chops Packs',
     desc: 'From Mini Bites to Royal Feast — perfect for every occasion.',
-    price: 'From ₦4,500',
+    price: 'From ₦2,380',
     image: '/menu/mini.jpg',
   },
   {
     title: 'Golden Linking Fries',
     desc: 'Crispy yam, plantain & sweet potato delights.',
-    price: 'From ₦5,500',
+    price: 'From ₦2,540',
     image: '/menu/gourmet.jpg',
   },
 ];
@@ -42,7 +42,7 @@ const bestSellers = [
   {
     id: 1,
     name: 'MINI BITES PACK',
-    price: 4500,
+    price: 2380,
     rating: 5,
     description: 'Perfect starter pack of small chops',
     image: '/menu/mini.jpg',
@@ -50,7 +50,7 @@ const bestSellers = [
   {
     id: 8,
     name: 'ROYAL FEAST PACK',
-    price: 18500,
+    price: 14200,
     rating: 5,
     description: 'Our most popular party pack',
     image: '/menu/royal.jpg',
@@ -58,7 +58,7 @@ const bestSellers = [
   {
     id: 10,
     name: 'THE GOURMET BITES PACK',
-    price: 7000,
+    price: 2540,
     rating: 5,
     description: 'Golden fries with peppered chicken',
     image: '/menu/gourmet.jpg',
