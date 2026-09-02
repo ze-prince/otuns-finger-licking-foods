@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -21,6 +21,12 @@ import {
 } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 
+interface FormErrors {
+  name: string;
+  phone: string;
+  address: string;
+}
+
 export default function CartPage() {
   const {
     cart,
@@ -37,11 +43,16 @@ export default function CartPage() {
   const [notes, setNotes] = useState('');
   const [isGettingLocation, setIsGettingLocation] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     name: '',
     phone: '',
     address: '',
   });
+
+  // Refs so we can scroll to / focus whichever field fails validation first
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const addressRef = useRef<HTMLTextAreaElement>(null);
 
   const totalItems = useMemo(() => {
     return cart.reduce((total, { quantity }) => total + quantity, 0);
@@ -84,8 +95,10 @@ export default function CartPage() {
     );
   }, [name, phone, address, notes, hasMounted]);
 
-  const validateForm = () => {
-    const newErrors = {
+  // Returns the fresh errors object directly, so callers don't have to
+  // wait on state (which updates asynchronously) to know what failed.
+  const validateForm = (): FormErrors => {
+    const newErrors: FormErrors = {
       name: '',
       phone: '',
       address: '',
@@ -97,6 +110,8 @@ export default function CartPage() {
 
     if (!phone.trim()) {
       newErrors.phone = 'Please enter your phone number.';
+    } else if (phone.trim().replace(/[\s+()-]/g, '').length < 10) {
+      newErrors.phone = 'Please enter a valid phone number.';
     }
 
     if (!address.trim()) {
@@ -104,10 +119,23 @@ export default function CartPage() {
     }
 
     setErrors(newErrors);
+    return newErrors;
+  };
 
-    return !newErrors.name &&
-      !newErrors.phone &&
-      !newErrors.address;
+  // Scrolls to and focuses the first field with an error, in field order.
+  const focusFirstError = (formErrors: FormErrors) => {
+    let target: HTMLInputElement | HTMLTextAreaElement | null = null;
+
+    if (formErrors.name) target = nameRef.current;
+    else if (formErrors.phone) target = phoneRef.current;
+    else if (formErrors.address) target = addressRef.current;
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Small delay lets the scroll settle before focusing, which avoids
+      // the browser snapping the view again to "correct" for the focus jump.
+      setTimeout(() => target?.focus(), 300);
+    }
   };
 
   const getCurrentLocation = () => {
@@ -184,7 +212,11 @@ export default function CartPage() {
   const sendToWhatsApp = () => {
     if (cart.length === 0) return;
 
-    if (!validateForm()) {
+    const formErrors = validateForm();
+    const isValid = !formErrors.name && !formErrors.phone && !formErrors.address;
+
+    if (!isValid) {
+      focusFirstError(formErrors);
       return;
     }
 
@@ -268,7 +300,10 @@ export default function CartPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#fffdfb]">
       {/* Background decoration */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(#ea580c_0.7px,transparent_0.7px)] bg-[size:45px_45px] opacity-[0.035]" />
+      <div
+        className="absolute inset-0 -z-10 bg-[radial-gradient(#ea580c_0.7px,transparent_0.7px)] opacity-[0.035]"
+        style={{ backgroundSize: '45px 45px' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-32 lg:pb-12">
 
@@ -444,6 +479,7 @@ export default function CartPage() {
                   </label>
 
                   <input
+                    ref={nameRef}
                     type="text"
                     value={name}
                     onChange={(e) => {
@@ -454,6 +490,7 @@ export default function CartPage() {
                       }));
                     }}
                     placeholder="Enter your full name"
+                    aria-invalid={!!errors.name}
                     className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
                       errors.name
                         ? 'border-red-400 ring-2 ring-red-100'
@@ -477,6 +514,7 @@ export default function CartPage() {
                   </label>
 
                   <input
+                    ref={phoneRef}
                     type="tel"
                     value={phone}
                     onChange={(e) => {
@@ -487,6 +525,7 @@ export default function CartPage() {
                       }));
                     }}
                     placeholder="e.g. 08012345678"
+                    aria-invalid={!!errors.phone}
                     className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
                       errors.phone
                         ? 'border-red-400 ring-2 ring-red-100'
@@ -534,6 +573,7 @@ export default function CartPage() {
                   </div>
 
                   <textarea
+                    ref={addressRef}
                     value={address}
                     onChange={(e) => {
                       setAddress(e.target.value);
@@ -544,6 +584,7 @@ export default function CartPage() {
                     }}
                     placeholder="House number, street, area and nearest landmark..."
                     rows={4}
+                    aria-invalid={!!errors.address}
                     className={`w-full resize-none rounded-xl border px-4 py-3 outline-none transition ${
                       errors.address
                         ? 'border-red-400 ring-2 ring-red-100'
