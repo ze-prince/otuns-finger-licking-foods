@@ -501,12 +501,12 @@ export default function Home() {
           <h2 className="text-xl sm:text-2xl font-bold mb-2">Follow Us</h2>
           <p className="text-gray-600 mb-6 text-sm sm:text-base">See more of our daily creations</p>
           <a
-            href="https://instagram.com/yourhandle"
+            href="./"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-semibold px-6 sm:px-8 py-3 rounded-full hover:opacity-90 transition"
           >
-            @otunsfingerlickingfoods
+            @otunsdeliciousfoods
           </a>
         </motion.div>
       </section>

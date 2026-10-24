@@ -3,23 +3,23 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://your-custom-domain.com',
+      url: 'https://otuns-foods.com.ng',
       lastModified: new Date(),
     },
     {
-      url: 'https://your-custom-domain.com/menu',
+      url: 'https://otuns-foods.com.ng/menu',
       lastModified: new Date(),
     },
     {
-      url: 'https://your-custom-domain.com/about',
+      url: 'https://otuns-foods.com.ng/about',
       lastModified: new Date(),
     },
     {
-      url: 'https://your-custom-domain.com/gallery',
+      url: 'https://otuns-foods.com.ng/gallery',
       lastModified: new Date(),
     },
     {
-      url: 'https://your-custom-domain.com/contact',
+      url: 'https://otuns-foods.com.ng/contact',
       lastModified: new Date(),
     },
   ]

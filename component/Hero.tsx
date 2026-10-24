@@ -9,7 +9,7 @@ export default function Hero() {
   const [displayedSubtitle, setDisplayedSubtitle] = useState('');
   const [showButtons, setShowButtons] = useState(false);
 
-  const title = "Finger Licking Nigerian Delights";
+  const title = "Delicious Nigerian Delights";
   const subtitle = "Signature Asun, Small Chops, Party Packs & More. Hot, Fresh & Delivered Fast!";
 
   useEffect(() => {

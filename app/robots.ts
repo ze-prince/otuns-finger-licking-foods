@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://your-custom-domain.com/sitemap.xml',
+    sitemap: 'https://otuns-foods.com.ng/sitemap.xml',
   }
 }

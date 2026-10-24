@@ -65,27 +65,21 @@ export default function Navbar() {
       <nav className="border-b border-orange-100/70 bg-white/95 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
         <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-          {/* =========================
-              LOGO
-          ========================== */}
+          {/* ==================== LOGO + FAVICON ==================== */}
           <Link
             href="/"
-            className="group flex items-center gap-2.5"
+            className="group flex items-center gap-3"
           >
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: -3 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-              className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-orange-700 text-xl font-black text-white shadow-lg shadow-orange-500/20"
-            >
-              O
-            </motion.div>
-
+            <img
+              src="/logo-1.jpg"
+              alt="Otuns Foods"
+              className="h-9 w-9 rounded-xl object-cover"
+            />
             <div className="leading-none">
               <h1 className="text-[21px] font-extrabold tracking-tight text-zinc-900">
                 Otuns
               </h1>
-
-              <p className="mt-1 text-[11px] font-semibold tracking-wide text-orange-600">
+              <p className="mt-0.5 text-[11px] font-semibold tracking-wide text-orange-600">
                 FINGER LICKING FOODS
               </p>
             </div>
@@ -208,7 +202,7 @@ export default function Navbar() {
                         </h2>
 
                         <p className="text-[11px] font-semibold tracking-wide text-orange-600">
-                          FINGER LICKING FOODS
+                          DELICIOUS FOODS
                         </p>
                       </div>
                     </Link>
@@ -337,7 +331,7 @@ export default function Navbar() {
                     </p>
 
                     <p className="mt-2 text-center text-xs text-zinc-400">
-                      © 2026 Otuns Finger Licking Foods
+                      © 2026 Otuns Delicious Foods
                     </p>
                   </div>
 

@@ -221,7 +221,7 @@ export default function CartPage() {
     }
 
     let message =
-      `Hello Otuns Finger Licking Foods! 👋\n\n` +
+      `Hello Otuns Delicious Foods! 👋\n\n` +
       `🛒 *MY ORDER*\n\n`;
 
     cart.forEach(({ item, quantity }) => {

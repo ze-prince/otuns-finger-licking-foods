@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Otuns Finger Licking Foods | Finger Licking Nigerian Delights in Lagos',
-    template: '%s | Otuns Finger Licking Foods',
+    default: 'Otuns Delicious Foods | Delicious Nigerian Delights in Lagos',
+    template: '%s | Otuns Delicious Foods',
   },
   description: 'Premium Nigerian small chops, party packs, golden linking fries & asun delivery in Lagos. Fresh, hot & delivered fast. Order on WhatsApp now!',
   keywords: [
@@ -25,17 +25,17 @@ export const metadata: Metadata = {
     'Food delivery Lagos',
   ],
   openGraph: {
-    title: 'Otuns Finger Licking Foods',
+    title: 'Otuns Delicious Foods',
     description: 'Signature Asun, Small Chops, Party Packs & Golden Linking Fries – Fresh & Hot in Lagos',
     type: 'website',
     locale: 'en_NG',
-    siteName: 'Otuns Finger Licking Foods',
+    siteName: 'Otuns Delicious Foods',
     images: [
     {
       url: "/og-image.jpg",           // <-- Change this later
       width: 1200,
       height: 630,
-      alt: "Otuns Finger Licking Foods",
+      alt: "Otuns Delicious Foods",
     },
   ],
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  name: "Otuns Finger Licking Foods",
+  name: "Otuns Delicious Foods",
   description: "Signature Asun, Small Chops, Party Packs & Golden Linking Fries – Fresh & Hot in Lagos",
   url: "https://otuns-foods.com.ng",
   telephone: "+2348088740343",
@@ -70,7 +70,7 @@ const schemaMarkup = {
   },
   hasMenu: {
     "@type": "Menu",
-    name: "Otuns Finger Licking Foods Menu",
+    name: "Otuns Delicious Foods Menu",
     description: "Small Chops Packs, Golden Linking Fries & Themed Party Packs",
   },
 }
@@ -78,6 +78,9 @@ const schemaMarkup = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+    <link rel="icon" href="/logo-1.jpg" />
+  </head>
       <body className={inter.className}>
         <CartProvider>
           <Navbar />
