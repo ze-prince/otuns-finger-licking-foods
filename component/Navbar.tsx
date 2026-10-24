@@ -80,7 +80,7 @@ export default function Navbar() {
                 Otuns
               </h1>
               <p className="mt-0.5 text-[11px] font-semibold tracking-wide text-orange-600">
-                FINGER LICKING FOODS
+               DELICIOUS FOODS
               </p>
             </div>
           </Link>
