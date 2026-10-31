@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Otuns Delicious Foods',
     images: [
     {
-      url: "/og-image.jpg",           // <-- Change this later
+      url: "/favicon.ico.jpg",
       width: 1200,
       height: 630,
       alt: "Otuns Delicious Foods",
@@ -79,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-    <link rel="icon" href="/logo-1.jpg" />
+    <link rel="icon" href="/favicon.ico.jpg" />
   </head>
       <body className={inter.className}>
         <CartProvider>

@@ -71,7 +71,7 @@ export default function Navbar() {
             className="group flex items-center gap-3"
           >
             <img
-              src="/logo-1.jpg"
+              src="/favicon.ico.jpg"
               alt="Otuns Foods"
               className="h-9 w-9 rounded-xl object-cover"
             />
@@ -181,11 +181,11 @@ export default function Navbar() {
 
               <SheetContent
                 side="right"
-                className="w-[320px] border-l border-orange-100 bg-[#fffaf6] p-0 sm:w-[380px]"
+                className="flex h-full w-[320px] flex-col overflow-hidden border-l border-orange-100 bg-[#fffaf6] p-0 sm:w-[380px]"
               >
 
                 {/* Mobile Header */}
-                <div className="border-b border-orange-100 px-6 py-6">
+                <div className="shrink-0 border-b border-orange-100 px-6 py-6">
                   <div className="flex items-center justify-between">
 
                     <Link
@@ -211,7 +211,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div className="flex flex-1 flex-col px-5 py-7">
+                <div className="flex flex-1 flex-col overflow-y-auto min-h-0 px-5 py-7">
 
                   <p className="mb-4 px-2 text-[11px] font-bold uppercase tracking-[0.15em] text-zinc-400">
                     Explore
